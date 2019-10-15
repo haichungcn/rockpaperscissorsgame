@@ -1,22 +1,194 @@
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-width: 100vw;
+  text-align: center;
+  background-color: #e9ebee;
 }
 
-.App-link {
-  color: #09d3ac;
+.cards {
+  flex: 1;
+  display: flex;
+  min-height: 81vh;
+  min-width: 100vw;
+  text-align: center;
+  background-color: #e9ebee;
+}
+
+.choice-card {
+  flex: 1;
+  display: flex;
+  margin: 30px 50px;
+  font-size: 3em;
+  padding: 0 40px;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 25px;
+  flex-direction: column;
+  align-items: center;
+  border: 10px solid black;
+  background-color: white;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imgcontainer {
+  height: 250px;
+  width: 260px;
+  margin: 80px 0;
+  /* animation-name: random;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out; */
+}
+/*
+@keyframes random {
+  0% {background-image: url("https://opengameart.org/sites/default/files/forum-attachments/very%20simple%20rock_0.png");}
+  25% {background-image: url("http://www.pngmart.com/files/1/Scissors-PNG-Pic.png");}
+  50% {background-image: url("http://pngimagesfree.com/Paper/Thumb/blank-note-paper-free-clipa.png");}
+  75% {background-image: url("http://www.pngmart.com/files/1/Scissors-PNG-Pic.png");}
+  100% {background-image: url("https://opengameart.org/sites/default/files/forum-attachments/very%20simple%20rock_0.png");}
+} */
+
+
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+h1 {
+  font-size: 50px;
+}
+.winner {
+  color: green;
+  border: 10px solid green;
+}
+.loser {
+  color: red;
+  border: 10px solid red;
+}
+
+.navbar {
+  display: fixed;
+  top: 0;
+  background-color: #ffea00;
+  border-bottom: solid 1px;
+}
+
+.navbar > ul {
+  display: inline-block;
+  list-style: none;
+}
+
+.tie {
+  color: black;
+  border: 10px solid black;
+}
+
+
+button {
+  width: 90px;
+}
+
+/* .leftLogo {
+}
+
+.rightLogo {
+
+} */
+
+.logo {
+  height:32px;
+}
+
+.icon-default {
+  position: absolute;
+  top: 0;
+  display: block;
+  z-index:1;
+  transition: opacity .2s, transform .3s;
+  animation-name: swap1;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+.icon-change-1 {
+  position: absolute;
+  top: 0;
+  display: block;
+  z-index:0;
+  transition: opacity .2s, transform .3s;
+  opacity: 0;
+  animation: swap2;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+.icon-change-2 {
+  position: absolute;
+  top: 0;
+  display: block;
+  z-index:0;
+  transition: opacity .2s, transform .3s;
+  opacity: 0;
+  animation: swap3;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+@keyframes swap1 {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes swap2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes swap3 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.footer-container {
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  height: 120px;
+  background-color: #ffea00;
 }
