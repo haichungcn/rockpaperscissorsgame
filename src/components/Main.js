@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useState } from "react";
 
-import ChoiceCard from "./components/ChoiceCard";
-import NavBar from "./components/NavBar";
-import Footer from './components/Footer';
+import ChoiceCard from "./ChoiceCard";
+import NavBar from "./NavBar";
 
 export const CHOICES = {
     rock: {
@@ -71,12 +70,12 @@ function Main() {
         console.log(playerChoice);
         const computerChoice = randomChoice();
         const result = decideOutcome(playerChoice, computerChoice);
-        console.log('result', result);
+        // console.log('result', result);
         setResult(result)
         setPlayer(CHOICES[playerChoice])
         setComputer(CHOICES[computerChoice])
         setHistory([result, ...history])
-        console.log("classColor:", classColor)
+        // console.log("classColor:", classColor)
     }
 
     return (
@@ -102,7 +101,6 @@ function Main() {
                     color={classColor('computer', result)}
                 />
             </div>
-            <Footer />
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Main from '.components/Main.js';
+import Main from './components/Main';
 
 
 function SignInState(props) {
@@ -17,7 +17,7 @@ function SignInState(props) {
       <input type="password" className="form-control" placeholder="Username" required></input>
       <i className="fas fa-arrow-right"></i>
     </div>
-    <button onClick={props.onLoggedIn(true)}>Sign In</button>
+    <button onClick={() => props.onLoggedIn(true)}>Sign In</button>
   </div>
   );
 }
